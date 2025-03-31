@@ -1,0 +1,22 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+#include "game.h"
+
+typedef struct Player
+{
+	SDL_Renderer *renderer;
+	SDL_Texture *player1;
+	SDL_Texture *player2;
+	SDL_Rect player1_rect;
+	SDL_Rect player2_rect;
+	SDL_Color color;
+	double speed;
+	double angle;
+} Player_T;
+bool player_new(Player_T **player, SDL_Renderer *renderer, SDL_Texture *player_texture);
+void player_free(Player_T **player);
+void player_draw(Player_T *r);
+void player_reset(Player_T *r);
+void player_update(Player_T *r);
+
+#endif

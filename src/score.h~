@@ -1,0 +1,26 @@
+#ifndef SCORE_H
+#define SCORE_H
+#include "game.h"
+
+typedef struct Score
+{
+        SDL_Renderer *renderer;
+        SDL_Texture *image;
+	SDL_Texture *image2;
+        SDL_Color color;
+        SDL_Rect rect;
+	SDL_Rect rect2;
+        TTF_Font *font;
+        Uint32 score;
+	Uint32 score2;
+	bool is_score1;
+	bool is_score2;
+
+} Score_T;
+bool score_new(Score_T **score, SDL_Renderer *renderer);
+void score_free(Score_T **score);
+bool score_reset(Score_T *s);
+void score_draw(Score_T *s);
+bool score_update(Score_T *s);
+bool score_increment(Score_T *s, bool is_score2);
+#endif

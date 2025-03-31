@@ -1,0 +1,74 @@
+#include "game.h"
+#include "ball.h"
+
+bool ball_new(Ball_T **ball, SDL_Renderer *renderer, SDL_Texture *ball_texture)
+{
+	 *ball = calloc(1, sizeof(Ball_T));
+        if (*ball == NULL)
+        {
+                fprintf(stderr, "Error in calloc of new ball.\n");
+                return true;
+        }
+        Ball_T *b = *ball;
+	b->renderer = renderer;
+	b->speed = 10;
+	b->angle = 1;
+	b->ball = ball_texture;
+
+	if (SDL_QueryTexture(b->ball, NULL, NULL, &b->ball_rect.w, &b->ball_rect.h))
+        {
+                fprintf(stderr, "Error in querying ball texture: %s\n", SDL_GetError());
+                return true;
+        }
+
+	b->ball_rect.w = 30;
+	b->ball_rect.h = 30;
+	ball_reset(b);
+	return false;
+}
+
+void ball_reset(Ball_T *b)
+{
+	b->ball_rect.x = (WINDOW_WIDTH - b->ball_rect.w) / 2;
+	b->ball_rect.y = (WINDOW_HEIGHT - b->ball_rect.h) / 2;
+}
+
+void ball_draw(Ball_T *b)
+{
+//	SDL_RenderClear(b->renderer);
+	SDL_RenderCopy(b->renderer, b->ball, NULL, &b->ball_rect);
+}
+
+void ball_free(Ball_T **ball)
+{
+	if (*ball)
+	{
+		Ball_T *b = *ball;
+		SDL_DestroyTexture(b->ball);
+		b->ball = NULL;
+		b->renderer = NULL;
+		free(b);
+		b = NULL;
+		*ball = NULL;
+	}
+}
+
+void ball_update(Ball_T *b)
+{
+	double rad = b->angle * M_PI / 180;
+	//b->speed += abs((int)rad);
+	double dx = b->speed * cos(rad);
+	double dy= b->speed * sin(rad);
+
+	b->ball_rect.y += dy;
+	b->ball_rect.x += dx;
+
+	if (b->ball_rect.x <= 0 || b->ball_rect.x + b->ball_rect.w >= WINDOW_WIDTH)
+	{
+		b->angle = 180 - b->angle + ((b->ball_rect.y - 0) / WINDOW_HEIGHT - 0.5) * 60;
+	}
+	if (b->ball_rect.y <=0 || (b->ball_rect.y + b->ball_rect.h) >= WINDOW_HEIGHT)
+	{
+		b->angle = - b->angle;
+	}
+}

@@ -1,0 +1,28 @@
+#ifndef BALL_H
+#define BALL_H
+#include "game.h"
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+#define MAX_BOUNCE_ANGLE 75 * M_PI / 180.0
+typedef struct Ball
+{
+	SDL_Renderer *renderer;
+	SDL_Texture *ball;
+	SDL_Texture *ball_texture;
+	SDL_Rect ball_rect;
+	SDL_Color color;
+	double speed;
+	double angle;
+	bool left_border;
+	bool right_border;
+	bool top_border;
+	bool bottom_border;
+} Ball_T;
+bool ball_new(Ball_T **ball, SDL_Renderer *renderer, SDL_Texture *ball_texture);
+void ball_free(Ball_T **ball);
+void ball_draw(Ball_T *r);
+void ball_reset(Ball_T *r);
+void ball_update(Ball_T *r);
+
+#endif
