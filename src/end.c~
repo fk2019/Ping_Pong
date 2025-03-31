@@ -19,7 +19,7 @@ bool title_new(Title_T **title, SDL_Renderer *renderer)
                 fprintf(stderr, "Error opening font: %s\n", TTF_GetError());
                 return true;
         }
-	t->rect.y = WINDOW_HEIGHT / 3;
+	t->rect.y = WINDOW_HEIGHT / 2;
 	title_reset(t);
         return false;
 }

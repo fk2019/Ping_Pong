@@ -5,6 +5,7 @@
 #include "player.h"
 #include "score.h"
 #include "title.h"
+#include "end.h"
 
 typedef struct Game
 {
@@ -21,6 +22,7 @@ typedef struct Game
 	Player_T *player;
 	Score_T *score;
 	Title_T *title;
+	End_T *end;
 	bool playing;
 } Game_T;
 bool game_new(Game_T **g);

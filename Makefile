@@ -1,11 +1,11 @@
-TARGET = pong
+TARGET = game.exe
 BUILD_DIR = .build
 SOURCE_DIR = src
-CC ?= gcc
-CFLAGS_BASE =  -std=c99 $(shell pkg-config --cflags sdl2)
+CC := x86_64-w64-mingw32-gcc #compatibility with windows os
+CFLAGS_BASE = -I/usr/x86_64-w64-mingw32/include/SDL2 -Dmain=SDL_main
 CFLAGS_RELEASE = -O2
 LDFLAGS ?=
-LDLIBS_BASE = $(shell pkg-config --libs sdl2 SDL2_image SDL2_ttf SDL2_mixer) -lm
+LDLIBS_BASE = -L/opt/local/x86_64-w64-mingw32/lib -lSDL2 -lSDL2main -lm -lSDL2_image -lSDL2_mixer -lSDL2_ttf -mwindows
 SRCS = $(wildcard $(SOURCE_DIR)/*.c)
 OBJS = $(addprefix $(BUILD_DIR)/, $(notdir $(SRCS:.c=.o)))
 

@@ -29,6 +29,6 @@
 #define GAME_RESET_TIME 5000
 #define WINNING_POINTS 2
 #define WIN_BY 2
-#define MAX_GAMES 5
+#define MAX_GAMES 3
 #define BEST_GAMES (int)MAX_GAMES / 2 + 1
 #endif

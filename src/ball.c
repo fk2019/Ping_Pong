@@ -11,7 +11,7 @@ bool ball_new(Ball_T **ball, SDL_Renderer *renderer, SDL_Texture *ball_texture)
         }
         Ball_T *b = *ball;
 	b->renderer = renderer;
-	b->speed = 30;
+	b->speed = 10;
 	b->angle = 1;
 	b->ball = ball_texture;
 	b->plane1 = 180;
@@ -34,7 +34,7 @@ bool ball_new(Ball_T **ball, SDL_Renderer *renderer, SDL_Texture *ball_texture)
 void ball_reset(Ball_T *b)
 {
 	b->ball_rect.x = (WINDOW_WIDTH - b->ball_rect.w) / 2;
-	b->ball_rect.y = 0; //(WINDOW_HEIGHT - b->ball_rect.h) / 2;
+	b->ball_rect.y = (WINDOW_HEIGHT - b->ball_rect.h) / 2;
 	if (b->score2)
 	{
 		b->op = 1;

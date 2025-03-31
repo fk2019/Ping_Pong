@@ -4,10 +4,11 @@
 #include "player.h"
 #include "score.h"
 #include "title.h"
+#include "title.h"
 
 bool check_collision(Game_T *g);
 bool handle_collision(Game_T *g, bool is_score2);
-
+bool game_reset(Game_T *g);
 bool game_new(Game_T **game)
 {
 	*game = calloc(1, sizeof(Game_T));
@@ -23,10 +24,19 @@ bool game_new(Game_T **game)
 	if (player_new(&g->player, g->renderer, g->player1)) return true;
 	if (score_new(&g->score, g->renderer)) return true;
 	if (title_new(&g->title, g->renderer)) return true;
+	if (end_new(&g->end, g->renderer)) return true;
 	g->playing = true;
 	return false;
 }
-
+bool game_reset(Game_T *g)
+{
+	g->end->show_end = false;
+	g->score->end_game =  false;
+	g->score->player1 = false;
+	g->score->player2 = false;
+	if (match_reset(g->score)) return true;
+	return false;
+}
 void game_free(Game_T **game)
 {
 	if (*game)
@@ -75,7 +85,15 @@ bool handle_collision(Game_T *g, bool is_score2)
 		g->ball->score1 = false;
 	}
 	g->ball->playing = g->score->playing;
-	if (g->score->new_game) g->title->show_title = true;
+	if (g->score->new_game && !g->score->end_game) g->title->show_title = true;
+	else g->title->show_title = false;
+	if (g->score->end_game)
+	{
+		g->end->show_end = g->score->end_game;
+		g->end->player1 = g->score->player1;
+		g->end->player2 = g->score->player2;
+	}
+	else g->score->end_game = false;
 	return false;
 }
 bool check_collision(Game_T *g)
@@ -113,6 +131,11 @@ bool game_run(Game_T *g)
 					g->score->playing = true;
 					g->score->new_game = false;
 					g->title->show_title = false;
+					score_reset(g->score);
+					if (g->end->show_end)
+					{
+						if (game_reset(g)) return true;
+					}
 					break;
 				default:
 					break;
@@ -122,6 +145,7 @@ bool game_run(Game_T *g)
 			}
 		}
 		match_update(g->score);
+		game_update(g->score);
 		if (g->score->playing)
 		{
 			ball_update(g->ball, g->player);
@@ -132,6 +156,11 @@ bool game_run(Game_T *g)
 		{
 			title_update(g->title);
 		}
+
+		if (g->end->show_end && g->score->new_game)
+		{
+			end_update(g->end);
+		}
 		if (check_collision(g)) return true;
 		SDL_RenderClear(g->renderer);
 		SDL_RenderCopy(g->renderer, g->background_texture, NULL, &g->background_rect);
@@ -139,6 +168,7 @@ bool game_run(Game_T *g)
 		ball_draw(g->ball);
 		score_draw(g->score);
 		title_draw(g->title);
+		end_draw(g->end);
 		SDL_RenderPresent(g->renderer);
 		SDL_Delay(1000 / 60);
 	}

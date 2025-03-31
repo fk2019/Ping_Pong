@@ -32,12 +32,16 @@ void score_free(Score_T **score)
                 Score_T *s = *score;
                 TTF_CloseFont(s->font);
                 s->font = NULL;
-                SDL_DestroyTexture(s->image);
-                s->image = NULL;
-		SDL_DestroyTexture(s->image2);
-		s->image2 = NULL;
-		SDL_DestroyTexture(s->image3);
-		s->image3 = NULL;
+                SDL_DestroyTexture(s->score1_image);
+                s->score1_image = NULL;
+		SDL_DestroyTexture(s->score2_image);
+		s->score2_image = NULL;
+		SDL_DestroyTexture(s->game_image);
+		s->game_image = NULL;
+		SDL_DestroyTexture(s->win1_image);
+		s->win1_image = NULL;
+		SDL_DestroyTexture(s->win2_image);
+		s->win2_image = NULL;
                 s->renderer = NULL;
                 free(s);
                 s = NULL;
@@ -52,14 +56,25 @@ bool score_reset(Score_T *s)
         if (score_update(s)) return true;
         return false;
 }
-
+bool match_reset(Score_T *s)
+{
+	s->game = 0;
+	s->score_game = 0;
+	s->score_game2 = 0;
+	score_reset(s);
+	if (match_update(s)) return true;
+}
 void score_draw(Score_T *s)
 {
-	s->rect2.x = WINDOW_WIDTH - s->rect2.w - 10;
-	s->rect3.x = WINDOW_WIDTH / 2;
-        SDL_RenderCopy(s->renderer, s->image, NULL, &s->rect);
-	SDL_RenderCopy(s->renderer, s->image2, NULL, &s->rect2);
-	SDL_RenderCopy(s->renderer, s->image3, NULL, &s->rect3);
+	s->score2_rect.x = WINDOW_WIDTH - s->score2_rect.w - 10;
+	s->game_rect.x = (s->win1_rect.x + s->win1_rect.w + s->win2_rect.x)/2;
+	s->win1_rect.x = s->score1_rect.w + 20;
+	s->win2_rect.x = s->score2_rect.x - s->score2_rect.w - s->win2_rect.w / 2;
+        SDL_RenderCopy(s->renderer, s->score1_image, NULL, &s->score1_rect);
+	SDL_RenderCopy(s->renderer, s->score2_image, NULL, &s->score2_rect);
+	SDL_RenderCopy(s->renderer, s->game_image, NULL, &s->game_rect);
+	SDL_RenderCopy(s->renderer, s->win1_image, NULL, &s->win1_rect);
+	SDL_RenderCopy(s->renderer, s->win2_image, NULL, &s->win2_rect);
 }
 
 bool match_update(Score_T *s)
@@ -73,17 +88,61 @@ bool match_update(Score_T *s)
                 fprintf(stderr, "Error creating surface: %s\n", TTF_GetError());
                 return true;
         }
-	s->rect3.w = surface->w;
-	s->rect3.h = surface->h;
+	s->game_rect.w = surface->w;
+	s->game_rect.h = surface->h;
 
-	s->image3 = SDL_CreateTextureFromSurface(s->renderer, surface);
-	if (!s->image3)
+	s->game_image = SDL_CreateTextureFromSurface(s->renderer, surface);
+	if (!s->game_image)
         {
                 fprintf(stderr, "Error creating texture from surface: %s\n", SDL_GetError());
                 return true;
         }
 	return false;
 }
+
+bool game_update(Score_T *s)
+{
+	//game1
+	int length = snprintf(NULL, 0, "Won: %d/%d\n", s->score_game, MAX_GAMES);
+        char score_str[length];
+        snprintf(score_str, (size_t)length, "Won: %d/%d\n", s->score_game, MAX_GAMES);
+        SDL_Surface *surface = TTF_RenderText_Blended(s->font, score_str, s->color);
+        if (!surface)
+        {
+                fprintf(stderr, "Error creating surface: %s\n", TTF_GetError());
+                return true;
+        }
+	s->win1_rect.w = surface->w;
+	s->win1_rect.h = surface->h;
+
+	s->win1_image = SDL_CreateTextureFromSurface(s->renderer, surface);
+	if (!s->win1_image)
+        {
+                fprintf(stderr, "Error creating texture from surface: %s\n", SDL_GetError());
+                return true;
+        }
+	//game2
+	int length2 = snprintf(NULL, 0, "Won: %d/%d\n", s->score_game2, MAX_GAMES);
+        char score_str2[length];
+        snprintf(score_str2, (size_t)length2, "Won: %d/%d\n", s->score_game2, MAX_GAMES);
+        SDL_Surface *surface2 = TTF_RenderText_Blended(s->font, score_str2, s->color);
+        if (!surface2)
+        {
+                fprintf(stderr, "Error creating surface: %s\n", TTF_GetError());
+                return true;
+        }
+	s->win2_rect.w = surface2->w;
+	s->win2_rect.h = surface2->h;
+
+	s->win2_image = SDL_CreateTextureFromSurface(s->renderer, surface2);
+	if (!s->win2_image)
+        {
+                fprintf(stderr, "Error creating texture from surface: %s\n", SDL_GetError());
+                return true;
+        }
+	return false;
+}
+
 bool score_update(Score_T *s)
 {
         int length = snprintf(NULL, 0, "Score: %d\n", s->score);
@@ -95,11 +154,11 @@ bool score_update(Score_T *s)
                 fprintf(stderr, "Error creating surface: %s\n", TTF_GetError());
                 return true;
         }
-	s->rect.w = surface->w;
-	s->rect.h = surface->h;
+	s->score1_rect.w = surface->w;
+	s->score1_rect.h = surface->h;
 
-	s->image = SDL_CreateTextureFromSurface(s->renderer, surface);
-	if (!s->image)
+	s->score1_image = SDL_CreateTextureFromSurface(s->renderer, surface);
+	if (!s->score1_image)
         {
                 fprintf(stderr, "Error creating texture from surface: %s\n", SDL_GetError());
                 return true;
@@ -114,11 +173,11 @@ bool score_update(Score_T *s)
                 fprintf(stderr, "Error creating surface2: %s\n", TTF_GetError());
                 return true;
         }
-	s->rect2.w = surface2->w;
-	s->rect2.h = surface2->h;
+	s->score2_rect.w = surface2->w;
+	s->score2_rect.h = surface2->h;
 
-	s->image2 = SDL_CreateTextureFromSurface(s->renderer, surface2);
-	if (!s->image2)
+	s->score2_image = SDL_CreateTextureFromSurface(s->renderer, surface2);
+	if (!s->score2_image)
         {
                 fprintf(stderr, "Error creating texture from surface2: %s\n", SDL_GetError());
                 return true;
@@ -131,6 +190,7 @@ bool score_increment(Score_T *s, bool is_score2)
 	if (is_score2) s->score2++;
 	else s->score++;
 	if (match_update(s)) return true;
+	if (game_update(s)) return true;
 	if (score_update(s)) return true;
 	if (s->score >= WINNING_POINTS || s->score2 >= WINNING_POINTS && abs(s->score - s->score2))
 	{
@@ -145,18 +205,22 @@ bool score_increment(Score_T *s, bool is_score2)
 			s->score_game2++;
 		}
 		s->game++;
-		score_reset(s);
 	}
 	if (s->playing) s->new_game = false;
 	if (s->score_game == BEST_GAMES)
 	{
 		s->playing = false;
-		printf("player 1 wins match\n");
+		s->game -= 1;
+		s->end_game = true;
+		s->new_game = true;
+		s->player1 = true;
 	}
 	if (s->score_game2 == BEST_GAMES)
 	{
 		s->playing = false;
-		printf("player 2 wins match\n");
+		s->game -= 1;
+		s->end_game = true;
+		s->new_game = true;
+		s->player2 = true;
 	}
-
 }
