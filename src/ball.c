@@ -11,12 +11,13 @@ bool ball_new(Ball_T **ball, SDL_Renderer *renderer, SDL_Texture *ball_texture)
         }
         Ball_T *b = *ball;
 	b->renderer = renderer;
-	b->speed = 10;
+	b->speed = 30;
 	b->angle = 1;
 	b->ball = ball_texture;
 	b->plane1 = 180;
 	b->plane2 = 360;
 	b->op = -1;
+	b->playing = true;
 
 	if (SDL_QueryTexture(b->ball, NULL, NULL, &b->ball_rect.w, &b->ball_rect.h))
         {
@@ -120,4 +121,7 @@ void ball_update(Ball_T *b, Player_T *p)
 	{
 		b->angle = - b->angle;
 	}
+	//b->playing = s->playing;
+	//printf("bplaying?: %d splaying: %d\n", b->playing, s->playing);
+
 }

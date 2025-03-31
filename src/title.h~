@@ -22,7 +22,6 @@ typedef struct Score
 	bool is_score1;
 	bool is_score2;
 	bool playing;
-	bool new_game;
 
 } Score_T;
 bool score_new(Score_T **score, SDL_Renderer *renderer);

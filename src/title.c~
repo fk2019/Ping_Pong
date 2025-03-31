@@ -134,20 +134,14 @@ bool score_increment(Score_T *s, bool is_score2)
 	if (score_update(s)) return true;
 	if (s->score >= WINNING_POINTS || s->score2 >= WINNING_POINTS && abs(s->score - s->score2))
 	{
+		int dif = abs(s->score - s->score2);
+		printf("diff: %d\n", dif);
 		s->playing = false;
-		s->new_game = true;
-		if (s->score > s->score2)
-		{
-			s->score_game++;
-		}
-		else
-		{
-			s->score_game2++;
-		}
+		if (s->score > s->score2) s->score_game++;
+		else s->score_game2++;
 		s->game++;
 		score_reset(s);
 	}
-	if (s->playing) s->new_game = false;
 	if (s->score_game == BEST_GAMES)
 	{
 		s->playing = false;

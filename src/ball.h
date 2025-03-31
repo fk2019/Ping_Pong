@@ -6,6 +6,7 @@
 #endif
 #define MAX_BOUNCE_ANGLE 75 * M_PI / 180.0
 #include "player.h"
+
 typedef struct Ball
 {
 	SDL_Renderer *renderer;
@@ -26,6 +27,7 @@ typedef struct Ball
 	bool score1;
 	bool score2;
 	bool hit;
+	bool playing;
 } Ball_T;
 bool ball_new(Ball_T **ball, SDL_Renderer *renderer, SDL_Texture *ball_texture);
 void ball_free(Ball_T **ball);
