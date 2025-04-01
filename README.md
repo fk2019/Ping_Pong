@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [Introduction](#org104c239)
-2.  [Features](#orgecffab5)
-3.  [Technologies Used](#org82e1d93)
-4.  [Getting Started](#org2537462)
-    1.  [Requirements](#org4f5119b)
-    2.  [Installation and Compilation](#orgda7b499)
-5.  [Screenshots](#org57549d6)
-6.  [Contributions](#orgd16a8d0)
-7.  [Authors](#orgb0042d4)
-8.  [Licence](#org10b66c6)
+1.  [Introduction](#orgebdbe00)
+2.  [Features](#org01730ad)
+3.  [Technologies Used](#org46eb6a1)
+4.  [Getting Started](#org4a027e5)
+    1.  [Requirements](#org6fbd88a)
+    2.  [Installation and Compilation](#org84339f2)
+5.  [Screenshots](#org43c9580)
+6.  [Contributions](#org4cc9b97)
+7.  [Authors](#org7a2040f)
+8.  [Licence](#org529fdcd)
 
 
 
-<a id="org104c239"></a>
+<a id="orgebdbe00"></a>
 
 # Introduction
 
@@ -24,7 +24,7 @@ of ping pong. It ensures that a player wins by at least 2 points. The match is
 won following a best of 5 games.
 
 
-<a id="orgecffab5"></a>
+<a id="org01730ad"></a>
 
 # Features
 
@@ -33,7 +33,7 @@ won following a best of 5 games.
 -   Easy installation both Linux and Windows systems
 
 
-<a id="org82e1d93"></a>
+<a id="org46eb6a1"></a>
 
 # Technologies Used
 
@@ -42,12 +42,12 @@ won following a best of 5 games.
 -   Windows
 
 
-<a id="org2537462"></a>
+<a id="org4a027e5"></a>
 
 # Getting Started
 
 
-<a id="org4f5119b"></a>
+<a id="org6fbd88a"></a>
 
 ## Requirements
 
@@ -58,7 +58,7 @@ C compilers such as
 -   MinGW(for Windows)
 
 
-<a id="orgda7b499"></a>
+<a id="org84339f2"></a>
 
 ## Installation and Compilation
 
@@ -75,6 +75,8 @@ C compilers such as
 eco
 
     echo $0
+    git clone https://github.com/fk2019/Ping_Pong.git
+    cd Ping_Pong
 
 python
 
@@ -84,7 +86,7 @@ python
 1.  Play and enjoy the game
 
 
-<a id="org57549d6"></a>
+<a id="org43c9580"></a>
 
 # Screenshots
 
@@ -95,21 +97,21 @@ A game win
 A match win
 
 
-<a id="orgd16a8d0"></a>
+<a id="org4cc9b97"></a>
 
 # Contributions
 
 Please feel free to fork and make contributions to the game.
 
 
-<a id="orgb0042d4"></a>
+<a id="org7a2040f"></a>
 
 # Authors
 
 Francis is a skilled Software Engineer keen on making great programs. Reach out to [Francis](mailto:fkmuiruri8@gmail.com) for any opportunities and collaborations.
 
 
-<a id="org10b66c6"></a>
+<a id="org529fdcd"></a>
 
 # Licence
 

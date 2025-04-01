@@ -33,6 +33,8 @@ C compilers such as
 eco
 #+begin_src bash
   echo $0
+  git clone https://github.com/fk2019/Ping_Pong.git
+  cd Ping_Pong
 #+end_src
 python
 #+begin_src python
