@@ -16,6 +16,9 @@ won following a best of 5 games.
 - SDL2
 - Windows
 * Getting Started
+The requirements and compilation steps described below are for a Linux Environment since the game was developed on
+it. However, feel free to install the required packages if you wish to modify the code and compile on a different system.
+To simply run the game without compiling, skip step 2.
 ** Requirements
 C compilers such as
 - GCC
@@ -30,10 +33,19 @@ SDL2
 #+end_src
 2. Compile the program and run the game
    #+begin_src bash
-     make
+     make rebuild
      ./game.exe
 #+end_src
 3. Play and enjoy the game
+On Linux:
+   #+begin_src bash
+     ./game
+#+end_src
+On Windows
+   #+begin_src bash
+     game.exe
+#+end_src
+
 * Screenshots
 #+CAPTION: A game win
 [[./images/game_win.png]]

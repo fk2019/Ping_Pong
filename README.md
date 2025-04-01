@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [Introduction](#org3123924)
-2.  [Features](#orgbfae4c8)
-3.  [Technologies Used](#org6c85cc8)
-4.  [Getting Started](#org7a3ed58)
-    1.  [Requirements](#orgb351f6d)
-    2.  [Installation and Compilation](#org36de0aa)
-5.  [Screenshots](#org7ae48d8)
-6.  [Contributions](#org072ea20)
-7.  [Authors](#org798d02d)
-8.  [Licence](#org2ab4516)
+1.  [Introduction](#org45e5b52)
+2.  [Features](#org6eb0e98)
+3.  [Technologies Used](#orga4d4e6a)
+4.  [Getting Started](#org86b4817)
+    1.  [Requirements](#orgff9088d)
+    2.  [Installation and Compilation](#orgd3ecf91)
+5.  [Screenshots](#org08ac908)
+6.  [Contributions](#org3ebd992)
+7.  [Authors](#org9e69976)
+8.  [Licence](#orgc745610)
 
 
 
-<a id="org3123924"></a>
+<a id="org45e5b52"></a>
 
 # Introduction
 
@@ -24,7 +24,7 @@ of ping pong. It ensures that a player wins by at least 2 points. The match is
 won following a best of 5 games.
 
 
-<a id="orgbfae4c8"></a>
+<a id="org6eb0e98"></a>
 
 # Features
 
@@ -33,7 +33,7 @@ won following a best of 5 games.
 -   Easy installation both Linux and Windows systems
 
 
-<a id="org6c85cc8"></a>
+<a id="orga4d4e6a"></a>
 
 # Technologies Used
 
@@ -43,12 +43,16 @@ won following a best of 5 games.
 -   Windows
 
 
-<a id="org7a3ed58"></a>
+<a id="org86b4817"></a>
 
 # Getting Started
 
+The requirements and compilation steps described below are for a Linux Environment since the game was developed on
+it. However, feel free to install the required packages if you wish to modify the code and compile on a different system.
+To simply run the game without compiling, skip step 2.
 
-<a id="orgb351f6d"></a>
+
+<a id="orgff9088d"></a>
 
 ## Requirements
 
@@ -61,7 +65,7 @@ C compilers such as
 SDL2
 
 
-<a id="org36de0aa"></a>
+<a id="orgd3ecf91"></a>
 
 ## Installation and Compilation
 
@@ -71,12 +75,20 @@ SDL2
         cd Ping_Pong
 2.  Compile the program and run the game
     
-        make
+        make rebuild
         ./game.exe
 3.  Play and enjoy the game
 
+On Linux:
 
-<a id="org7ae48d8"></a>
+    ./game
+
+On Windows
+
+    game.exe
+
+
+<a id="org08ac908"></a>
 
 # Screenshots
 
@@ -87,21 +99,21 @@ A game win
 A match win
 
 
-<a id="org072ea20"></a>
+<a id="org3ebd992"></a>
 
 # Contributions
 
 Please feel free to fork and make contributions to the game.
 
 
-<a id="org798d02d"></a>
+<a id="org9e69976"></a>
 
 # Authors
 
 Francis is a skilled Software Engineer keen on making great programs. Reach out to [Francis](mailto:fkmuiruri8@gmail.com) for any opportunities and collaborations.
 
 
-<a id="org2ab4516"></a>
+<a id="orgc745610"></a>
 
 # Licence
 
