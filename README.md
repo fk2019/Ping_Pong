@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [Introduction](#org4421df7)
-2.  [Features](#org4ea26f7)
-3.  [Technologies Used](#org6f5ed5b)
-4.  [Getting Started](#org4427260)
-    1.  [Requirements](#org8441e21)
-    2.  [Installation and Compilation](#orgba2edd0)
-5.  [Screenshots](#orgdbe9e07)
-6.  [Contributions](#org5b0a615)
-7.  [Authors](#org9fdc89c)
-8.  [Licence](#org2c120f1)
+1.  [Introduction](#org03594b1)
+2.  [Features](#org882471b)
+3.  [Technologies Used](#orgd25c7f8)
+4.  [Getting Started](#orge215d7d)
+    1.  [Requirements](#org6102ac4)
+    2.  [Installation and Compilation](#orgcb50129)
+5.  [Screenshots](#orgf49da68)
+6.  [Contributions](#org13a132d)
+7.  [Authors](#org441690b)
+8.  [Licence](#orgd0e7365)
 
 
 
-<a id="org4421df7"></a>
+<a id="org03594b1"></a>
 
 # Introduction
 
@@ -24,7 +24,7 @@ of ping pong. It ensures that a player wins by at least 2 points. The match is
 won following a best of 5 games.
 
 
-<a id="org4ea26f7"></a>
+<a id="org882471b"></a>
 
 # Features
 
@@ -33,7 +33,7 @@ won following a best of 5 games.
 -   Easy installation both Linux and Windows systems
 
 
-<a id="org6f5ed5b"></a>
+<a id="orgd25c7f8"></a>
 
 # Technologies Used
 
@@ -43,7 +43,7 @@ won following a best of 5 games.
 -   Windows
 
 
-<a id="org4427260"></a>
+<a id="orge215d7d"></a>
 
 # Getting Started
 
@@ -52,7 +52,7 @@ it. However, feel free to install the required packages if you wish to modify th
 To simply run the game without compiling, skip step 2 of the installation stage.
 
 
-<a id="org8441e21"></a>
+<a id="org6102ac4"></a>
 
 ## Requirements
 
@@ -65,7 +65,7 @@ C compilers such as
 SDL2
 
 
-<a id="orgba2edd0"></a>
+<a id="orgcb50129"></a>
 
 ## Installation and Compilation
 
@@ -78,7 +78,7 @@ SDL2
         make rebuild
         ./ping_pong.exe
 3.  Play and enjoy the game
-    On Linux:
+    On Linux
     
         ./ping_pong
     
@@ -87,7 +87,7 @@ SDL2
         ping_pong.exe
 
 
-<a id="orgdbe9e07"></a>
+<a id="orgf49da68"></a>
 
 # Screenshots
 
@@ -98,21 +98,21 @@ A game win
 A match win
 
 
-<a id="org5b0a615"></a>
+<a id="org13a132d"></a>
 
 # Contributions
 
 Please feel free to fork and make contributions to the game.
 
 
-<a id="org9fdc89c"></a>
+<a id="org441690b"></a>
 
 # Authors
 
 Francis is a skilled Software Engineer keen on making great programs. Reach out to [Francis](mailto:fkmuiruri8@gmail.com) for any opportunities and collaborations.
 
 
-<a id="org2c120f1"></a>
+<a id="orgd0e7365"></a>
 
 # Licence
 
