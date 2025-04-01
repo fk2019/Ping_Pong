@@ -33,7 +33,7 @@ make
 3. Play and enjoy the game
 * Screenshots
 A game win
-[[file:images/game_win.png][Game Win]]
+[[file:/images/game_win.png][Game Win]]
 A Match win
 [[/Ping_Pong/images/match_win.png][Match win]]
 * Contributions
