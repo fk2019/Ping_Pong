@@ -27,8 +27,8 @@
 #define TARGET_FPS 60
 #define GAME_RESET_EVENT SDL_USEREVENT
 #define GAME_RESET_TIME 5000
-#define WINNING_POINTS 2
+#define WINNING_POINTS 11
 #define WIN_BY 2
-#define MAX_GAMES 3
+#define MAX_GAMES 5
 #define BEST_GAMES (int)MAX_GAMES / 2 + 1
 #endif
