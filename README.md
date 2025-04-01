@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [Introduction](#orgb708aec)
-2.  [Features](#org7b84447)
-3.  [Technologies Used](#orgc184e23)
-4.  [Getting Started](#org6d88a70)
-    1.  [Requirements](#org107b8a1)
-    2.  [Installation and Compilation](#orgdc294b6)
-5.  [Screenshots](#org3de2e6c)
-6.  [Contributions](#orgef9c94f)
-7.  [Authors](#org4846790)
-8.  [Licence](#org98495e1)
+1.  [Introduction](#org104c239)
+2.  [Features](#orgecffab5)
+3.  [Technologies Used](#org82e1d93)
+4.  [Getting Started](#org2537462)
+    1.  [Requirements](#org4f5119b)
+    2.  [Installation and Compilation](#orgda7b499)
+5.  [Screenshots](#org57549d6)
+6.  [Contributions](#orgd16a8d0)
+7.  [Authors](#orgb0042d4)
+8.  [Licence](#org10b66c6)
 
 
 
-<a id="orgb708aec"></a>
+<a id="org104c239"></a>
 
 # Introduction
 
@@ -24,7 +24,7 @@ of ping pong. It ensures that a player wins by at least 2 points. The match is
 won following a best of 5 games.
 
 
-<a id="org7b84447"></a>
+<a id="orgecffab5"></a>
 
 # Features
 
@@ -33,7 +33,7 @@ won following a best of 5 games.
 -   Easy installation both Linux and Windows systems
 
 
-<a id="orgc184e23"></a>
+<a id="org82e1d93"></a>
 
 # Technologies Used
 
@@ -42,12 +42,12 @@ won following a best of 5 games.
 -   Windows
 
 
-<a id="org6d88a70"></a>
+<a id="org2537462"></a>
 
 # Getting Started
 
 
-<a id="org107b8a1"></a>
+<a id="org4f5119b"></a>
 
 ## Requirements
 
@@ -58,7 +58,7 @@ C compilers such as
 -   MinGW(for Windows)
 
 
-<a id="orgdc294b6"></a>
+<a id="orgda7b499"></a>
 
 ## Installation and Compilation
 
@@ -72,10 +72,19 @@ C compilers such as
     make
     ./game.exe
 
+eco
+
+    echo $0
+
+python
+
+    def func():
+        print("Hello")
+
 1.  Play and enjoy the game
 
 
-<a id="org3de2e6c"></a>
+<a id="org57549d6"></a>
 
 # Screenshots
 
@@ -86,23 +95,23 @@ A game win
 A match win
 
 
-<a id="orgef9c94f"></a>
+<a id="orgd16a8d0"></a>
 
 # Contributions
 
 Please feel free to fork and make contributions to the game.
 
 
-<a id="org4846790"></a>
+<a id="orgb0042d4"></a>
 
 # Authors
 
 Francis is a skilled Software Engineer keen on making great programs. Reach out to [Francis](mailto:fkmuiruri8@gmail.com) for any opportunities and collaborations.
 
 
-<a id="org98495e1"></a>
+<a id="org10b66c6"></a>
 
 # Licence
 
-This project is licensed under the terms of the MIT license. Please see the [LICENSE](file:///Ping_Pong/LICENCE.txt) file for more details.
+This project is licensed under the terms of the MIT license. Please see the [LICENSE](./LICENCE.txt) file for more details.
 
