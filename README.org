@@ -37,7 +37,7 @@ SDL2
      ./ping_pong.exe
 #+end_src
 3. Play and enjoy the game
-   On Linux
+  On Linux
    #+begin_src bash
      ./ping_pong
 #+end_src
