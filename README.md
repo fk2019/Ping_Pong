@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [Introduction](#orgc6d0650)
-2.  [Features](#orge706988)
-3.  [Technologies Used](#org765c95a)
-4.  [Getting Started](#org1b233e4)
-    1.  [Requirements](#orgf8bf70c)
-    2.  [Installation and Compilation](#org1c00e41)
-5.  [Screenshots](#org8851867)
-6.  [Contributions](#orgf76aadc)
-7.  [Authors](#org1c07eeb)
-8.  [Licence](#orgb15944f)
+1.  [Introduction](#org7f46d17)
+2.  [Features](#org03959cf)
+3.  [Technologies Used](#org5b318bc)
+4.  [Getting Started](#orgcfa5a55)
+    1.  [Requirements](#org96839ca)
+    2.  [Installation and Compilation](#org1692478)
+5.  [Screenshots](#orgcbad1d5)
+6.  [Contributions](#orgefe1c7d)
+7.  [Authors](#org10558b4)
+8.  [Licence](#orgfd38641)
 
 
 
-<a id="orgc6d0650"></a>
+<a id="org7f46d17"></a>
 
 # Introduction
 
@@ -24,7 +24,7 @@ of ping pong. It ensures that a player wins by at least 2 points. The match is
 won following a best of 5 games.
 
 
-<a id="orge706988"></a>
+<a id="org03959cf"></a>
 
 # Features
 
@@ -33,7 +33,7 @@ won following a best of 5 games.
 -   Easy installation both Linux and Windows systems
 
 
-<a id="org765c95a"></a>
+<a id="org5b318bc"></a>
 
 # Technologies Used
 
@@ -42,12 +42,12 @@ won following a best of 5 games.
 -   Windows
 
 
-<a id="org1b233e4"></a>
+<a id="orgcfa5a55"></a>
 
 # Getting Started
 
 
-<a id="orgf8bf70c"></a>
+<a id="org96839ca"></a>
 
 ## Requirements
 
@@ -58,24 +58,22 @@ C compilers such as
 -   MinGW(for Windows)
 
 
-<a id="org1c00e41"></a>
+<a id="org1692478"></a>
 
 ## Installation and Compilation
 
 1.  Clone the repo:
-
-    git clone https://github.com/fk2019/Ping_Pong.git
-    cd Ping_Pong
-
-1.  Compile the program and run the game
-
-    make
-    ./game.exe
-
-1.  Play and enjoy the game
+    
+        git clone https://github.com/fk2019/Ping_Pong.git
+        cd Ping_Pong
+2.  Compile the program and run the game
+    
+        make
+        ./game.exe
+3.  Play and enjoy the game
 
 
-<a id="org8851867"></a>
+<a id="orgcbad1d5"></a>
 
 # Screenshots
 
@@ -86,21 +84,21 @@ A game win
 A match win
 
 
-<a id="orgf76aadc"></a>
+<a id="orgefe1c7d"></a>
 
 # Contributions
 
 Please feel free to fork and make contributions to the game.
 
 
-<a id="org1c07eeb"></a>
+<a id="org10558b4"></a>
 
 # Authors
 
 Francis is a skilled Software Engineer keen on making great programs. Reach out to [Francis](mailto:fkmuiruri8@gmail.com) for any opportunities and collaborations.
 
 
-<a id="orgb15944f"></a>
+<a id="orgfd38641"></a>
 
 # Licence
 
