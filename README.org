@@ -1,0 +1,44 @@
+#+title: Ping Pong in C
+#+author: fk2019
+* Introduction
+This is my implementation of a simple ping pong game in C. It allows two players
+to compete in a tabel tennis game while keeping track of scores. The games follows the rules
+of ping pong. It ensures that a player wins by at least 2 points. The match is
+won following a best of 5 games.
+* Features
+- Score tracking for two players
+- Automatic handling of deuces
+- Easy installation both Linux and Windows systems
+* Technologies Used
+- C
+- Linux
+- Windows
+* Getting Started
+** Requirements
+C compilers such as
+- GCC
+- Clang
+- MinGW(for Windows)
+** Installation and Compilation
+1. Clone the repo:
+#+begin_src bash
+https://github.com/fk2019/Ping_Pong.git
+cd Ping_Pong
+#+end_src
+2. Compile the program and run the game
+#+begin_src bash
+make
+./game.exe
+#+end_src
+3. Play and enjoy the game
+* Screenshots
+A game win
+[[/Ping_Pong/images/game_win.png][Game Win]]
+A Match win
+[[/Ping_Pong/images/match_win.png][Match win]]
+* Contributions
+Please feel free to fork and make contributions to the game.
+* Authors
+Francis is a skilled Software Engineer keen on making great programs. Reach out to [[mailto:fkmuiruri8@gmail.com][Francis]] for any opportunities and collaborations.
+* Licence
+This project is licensed under the terms of the MIT license. Please see the [[/Ping_Pong/LICENCE.txt][LICENSE]] file for more details.
