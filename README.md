@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [Introduction](#org5f6255b)
-2.  [Features](#org9ad275a)
-3.  [Technologies Used](#org79775ea)
-4.  [Getting Started](#orgb1a5281)
-    1.  [Requirements](#orge7a2df5)
-    2.  [Installation and Compilation](#org270b59c)
-5.  [Screenshots](#orge14636d)
-6.  [Contributions](#orge471607)
-7.  [Authors](#org414b849)
-8.  [Licence](#org88aaef1)
+1.  [Introduction](#orgb708aec)
+2.  [Features](#org7b84447)
+3.  [Technologies Used](#orgc184e23)
+4.  [Getting Started](#org6d88a70)
+    1.  [Requirements](#org107b8a1)
+    2.  [Installation and Compilation](#orgdc294b6)
+5.  [Screenshots](#org3de2e6c)
+6.  [Contributions](#orgef9c94f)
+7.  [Authors](#org4846790)
+8.  [Licence](#org98495e1)
 
 
 
-<a id="org5f6255b"></a>
+<a id="orgb708aec"></a>
 
 # Introduction
 
@@ -24,7 +24,7 @@ of ping pong. It ensures that a player wins by at least 2 points. The match is
 won following a best of 5 games.
 
 
-<a id="org9ad275a"></a>
+<a id="org7b84447"></a>
 
 # Features
 
@@ -33,7 +33,7 @@ won following a best of 5 games.
 -   Easy installation both Linux and Windows systems
 
 
-<a id="org79775ea"></a>
+<a id="orgc184e23"></a>
 
 # Technologies Used
 
@@ -42,12 +42,12 @@ won following a best of 5 games.
 -   Windows
 
 
-<a id="orgb1a5281"></a>
+<a id="org6d88a70"></a>
 
 # Getting Started
 
 
-<a id="orge7a2df5"></a>
+<a id="org107b8a1"></a>
 
 ## Requirements
 
@@ -58,7 +58,7 @@ C compilers such as
 -   MinGW(for Windows)
 
 
-<a id="org270b59c"></a>
+<a id="orgdc294b6"></a>
 
 ## Installation and Compilation
 
@@ -75,7 +75,7 @@ C compilers such as
 1.  Play and enjoy the game
 
 
-<a id="orge14636d"></a>
+<a id="org3de2e6c"></a>
 
 # Screenshots
 
@@ -86,21 +86,21 @@ A game win
 A match win
 
 
-<a id="orge471607"></a>
+<a id="orgef9c94f"></a>
 
 # Contributions
 
 Please feel free to fork and make contributions to the game.
 
 
-<a id="org414b849"></a>
+<a id="org4846790"></a>
 
 # Authors
 
 Francis is a skilled Software Engineer keen on making great programs. Reach out to [Francis](mailto:fkmuiruri8@gmail.com) for any opportunities and collaborations.
 
 
-<a id="org88aaef1"></a>
+<a id="org98495e1"></a>
 
 # Licence
 
