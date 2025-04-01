@@ -22,7 +22,7 @@ C compilers such as
 ** Installation and Compilation
 1. Clone the repo:
 #+begin_src bash
-https://github.com/fk2019/Ping_Pong.git
+git clone https://github.com/fk2019/Ping_Pong.git
 cd Ping_Pong
 #+end_src
 2. Compile the program and run the game
@@ -34,8 +34,11 @@ make
 * Screenshots
 #+CAPTION: A game win
 [[./images/game_win.png]]
+A game win
+
 #+CAPTION: A match win
 [[./images/match_win.png]]
+A match win
 * Contributions
 Please feel free to fork and make contributions to the game.
 * Authors
