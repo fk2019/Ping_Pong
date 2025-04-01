@@ -32,10 +32,8 @@ make
 #+end_src
 3. Play and enjoy the game
 * Screenshots
-A game win
-[[file:images/game_win.png][Game Win]]
-A Match win
-[[/Ping_Pong/images/match_win.png][Match win]]
+[[./images/game_win.png]]
+[[./images/match_win.png]]
 * Contributions
 Please feel free to fork and make contributions to the game.
 * Authors
