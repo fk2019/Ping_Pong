@@ -12,6 +12,7 @@ won following a best of 5 games.
 * Technologies Used
 - C
 - Linux
+- SDL2
 - Windows
 * Getting Started
 ** Requirements
