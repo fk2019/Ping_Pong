@@ -32,7 +32,9 @@ make
 #+end_src
 3. Play and enjoy the game
 * Screenshots
+#+CAPTION: A game win
 [[./images/game_win.png]]
+#+CAPTION: A match win
 [[./images/match_win.png]]
 * Contributions
 Please feel free to fork and make contributions to the game.
