@@ -18,7 +18,7 @@ won following a best of 5 games.
 * Getting Started
 The requirements and compilation steps described below are for a Linux Environment since the game was developed on
 it. However, feel free to install the required packages if you wish to modify the code and compile on a different system.
-To simply run the game without compiling, skip step 2.
+To simply run the game without compiling, skip step 2 of the installation stage.
 ** Requirements
 C compilers such as
 - GCC
@@ -34,16 +34,16 @@ SDL2
 2. Compile the program and run the game
    #+begin_src bash
      make rebuild
-     ./game.exe
+     ./ping_pong.exe
 #+end_src
 3. Play and enjoy the game
-On Linux:
+   On Linux:
    #+begin_src bash
-     ./game
+     ./ping_pong
 #+end_src
-On Windows
+   On Windows
    #+begin_src bash
-     game.exe
+     ping_pong.exe
 #+end_src
 
 * Screenshots

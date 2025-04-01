@@ -16,6 +16,7 @@ bool game_initialize(Game_T *g)
 		return true;
 	}
 	// init mixer
+
 	int mix_init = Mix_Init(MIXER_FLAGS);
 	if ((mix_init & MIXER_FLAGS) != MIXER_FLAGS)
 	{

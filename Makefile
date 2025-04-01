@@ -1,4 +1,4 @@
-TARGET = game.exe
+TARGET = ping_pong.exe
 BUILD_DIR = .build
 SOURCE_DIR = src
 CC := x86_64-w64-mingw32-gcc #compatibility with windows os
