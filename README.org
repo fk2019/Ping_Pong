@@ -26,7 +26,7 @@ git clone https://github.com/fk2019/Ping_Pong.git
 cd Ping_Pong
 #+end_src
 2. Compile the program and run the game
-#+begin_src shell
+#+begin_src sh
 make
 ./game.exe
 #+end_src
