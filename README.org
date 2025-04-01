@@ -1,5 +1,6 @@
 #+title: Ping Pong in C
 #+author: fk2019
+#+options: toc: t
 * Introduction
 This is my implementation of a simple ping pong game in C. It allows two players
 to compete in a tabel tennis game while keeping track of scores. The games follows the rules
