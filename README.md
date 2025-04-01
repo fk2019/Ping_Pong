@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [Introduction](#orgd7887bb)
-2.  [Features](#orge9f6b72)
-3.  [Technologies Used](#org75933b7)
-4.  [Getting Started](#orgda0e0a2)
-    1.  [Requirements](#org43d0424)
-    2.  [Installation and Compilation](#org5d373b1)
-5.  [Screenshots](#org4c95d69)
-6.  [Contributions](#orgb88461e)
-7.  [Authors](#org848558e)
-8.  [Licence](#org21ed507)
+1.  [Introduction](#org3123924)
+2.  [Features](#orgbfae4c8)
+3.  [Technologies Used](#org6c85cc8)
+4.  [Getting Started](#org7a3ed58)
+    1.  [Requirements](#orgb351f6d)
+    2.  [Installation and Compilation](#org36de0aa)
+5.  [Screenshots](#org7ae48d8)
+6.  [Contributions](#org072ea20)
+7.  [Authors](#org798d02d)
+8.  [Licence](#org2ab4516)
 
 
 
-<a id="orgd7887bb"></a>
+<a id="org3123924"></a>
 
 # Introduction
 
@@ -24,7 +24,7 @@ of ping pong. It ensures that a player wins by at least 2 points. The match is
 won following a best of 5 games.
 
 
-<a id="orge9f6b72"></a>
+<a id="orgbfae4c8"></a>
 
 # Features
 
@@ -33,7 +33,7 @@ won following a best of 5 games.
 -   Easy installation both Linux and Windows systems
 
 
-<a id="org75933b7"></a>
+<a id="org6c85cc8"></a>
 
 # Technologies Used
 
@@ -43,12 +43,12 @@ won following a best of 5 games.
 -   Windows
 
 
-<a id="orgda0e0a2"></a>
+<a id="org7a3ed58"></a>
 
 # Getting Started
 
 
-<a id="org43d0424"></a>
+<a id="orgb351f6d"></a>
 
 ## Requirements
 
@@ -58,8 +58,10 @@ C compilers such as
 -   Clang
 -   MinGW(for Windows)
 
+SDL2
 
-<a id="org5d373b1"></a>
+
+<a id="org36de0aa"></a>
 
 ## Installation and Compilation
 
@@ -74,7 +76,7 @@ C compilers such as
 3.  Play and enjoy the game
 
 
-<a id="org4c95d69"></a>
+<a id="org7ae48d8"></a>
 
 # Screenshots
 
@@ -85,21 +87,21 @@ A game win
 A match win
 
 
-<a id="orgb88461e"></a>
+<a id="org072ea20"></a>
 
 # Contributions
 
 Please feel free to fork and make contributions to the game.
 
 
-<a id="org848558e"></a>
+<a id="org798d02d"></a>
 
 # Authors
 
 Francis is a skilled Software Engineer keen on making great programs. Reach out to [Francis](mailto:fkmuiruri8@gmail.com) for any opportunities and collaborations.
 
 
-<a id="org21ed507"></a>
+<a id="org2ab4516"></a>
 
 # Licence
 

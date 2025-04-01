@@ -21,6 +21,7 @@ C compilers such as
 - GCC
 - Clang
 - MinGW(for Windows)
+SDL2
 ** Installation and Compilation
 1. Clone the repo:
    #+begin_src bash
