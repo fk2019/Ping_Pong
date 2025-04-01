@@ -21,12 +21,12 @@ C compilers such as
 - MinGW(for Windows)
 ** Installation and Compilation
 1. Clone the repo:
-#+begin_src bash
+#+begin_src shell
 git clone https://github.com/fk2019/Ping_Pong.git
 cd Ping_Pong
 #+end_src
 2. Compile the program and run the game
-#+begin_src bash
+#+begin_src shell
 make
 ./game.exe
 #+end_src
