@@ -1,4 +1,4 @@
 *~
 *.exe
 pong
-.build
+.build/
